@@ -58,6 +58,8 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 - [Create React App](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/create-react-app.md)
 
+- [customize-cra](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/customize-cra.md)
+
 - [ESLint](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint.md)
 
 - [eslint-config-prettier](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-config-prettier.md)
@@ -65,6 +67,10 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 - [eslint-import-resolver-babel-plugin-root-import](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-import-resolver-babel-plugin-root-import.md)
 
 - [eslint-plugin-prettier](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-plugin-prettier.md)
+
+- [Prettier](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/prettier.md)
+
+- [react-app-rewired](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-app-rewired.md)
 
 ### APIs
 
