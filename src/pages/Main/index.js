@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import api from '~/services/api';
 
 // import { Container } from './styles';
 
 export default function Main() {
-  return <div />;
+  useEffect(() => {
+    api.get('/teste');
+  }, []);
+
+  return <h1>Hellow</h1>;
 }
