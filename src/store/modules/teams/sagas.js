@@ -4,7 +4,6 @@ import api from '~/services/api';
 import { getTeamsSuccess } from './actions';
 
 export function* getTeams() {
-  console.log('oi');
   const response = yield call(api.get, 'teams');
 
   yield put(getTeamsSuccess(response.data));
