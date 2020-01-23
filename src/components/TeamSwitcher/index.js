@@ -1,9 +1,17 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Container, TeamList, Team } from './styles';
+import Button from '~/styles/components/Button';
+import Modal from '~/components/Modal';
 
-import { getTeamsRequest, selectTeam } from '~/store/modules/teams/actions';
+import { Container, TeamList, Team, NewTeam } from './styles';
+
+import {
+  getTeamsRequest,
+  selectTeam,
+  openTeamModal,
+  closeTeamModal,
+} from '~/store/modules/teams/actions';
 
 export default function TeamSwitcher() {
   const dispatch = useDispatch();
@@ -32,6 +40,38 @@ export default function TeamSwitcher() {
             />
           </Team>
         ))}
+
+        <NewTeam
+          onClick={() => {
+            dispatch(openTeamModal());
+          }}
+        >
+          NOVO
+        </NewTeam>
+
+        {teams.teamModalOpen && (
+          <Modal>
+            <h1>Criar time</h1>
+
+            <form onSubmit={() => {}}>
+              <span>NOME</span>
+              <input name="newTeam" />
+
+              <Button size="big" type="submit">
+                Savar
+              </Button>
+              <Button
+                onClick={() => {
+                  dispatch(closeTeamModal());
+                }}
+                size="small"
+                color="gray"
+              >
+                Cancelar
+              </Button>
+            </form>
+          </Modal>
+        )}
       </TeamList>
     </Container>
   );

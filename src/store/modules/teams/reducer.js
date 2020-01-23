@@ -2,6 +2,7 @@ import produce from 'immer';
 
 const INITIAL_STATE = {
   data: [],
+  teamModalOpen: false,
   active: JSON.parse(localStorage.getItem('@Omni:team')) || null,
 };
 
@@ -16,6 +17,14 @@ export default function teams(state = INITIAL_STATE, action) {
         localStorage.setItem('@Omni:team', JSON.stringify(action.payload.team));
 
         draft.active = action.payload.team;
+        break;
+      }
+      case '@teams/OPEN_TEAM_MODAL': {
+        draft.teamModalOpen = true;
+        break;
+      }
+      case '@teams/CLOSE_TEAM_MODAL': {
+        draft.teamModalOpen = false;
         break;
       }
       default:
