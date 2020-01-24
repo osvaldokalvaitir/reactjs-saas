@@ -10,7 +10,12 @@ export default function auth(state = INITIAL_STATE, action) {
     switch (action.type) {
       case '@auth/SIGN_IN_SUCCESS': {
         draft.token = action.payload.token;
-        draft.signed = true;
+        draft.signedIn = true;
+        break;
+      }
+      case '@auth/SIGN_OUT': {
+        draft.token = null;
+        draft.signedIn = false;
         break;
       }
       default:

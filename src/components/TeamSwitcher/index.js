@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Button from '~/styles/components/Button';
 import Modal from '~/components/Modal';
 
-import { Container, TeamList, Team, NewTeam } from './styles';
+import { Container, TeamList, Team, NewTeam, Logout } from './styles';
 
 import {
   getTeamsRequest,
@@ -13,6 +13,8 @@ import {
   closeTeamModal,
   createTeamRequest,
 } from '~/store/modules/teams/actions';
+
+import { signOut } from '~/store/modules/auth/actions';
 
 export default function TeamSwitcher() {
   const dispatch = useDispatch();
@@ -85,6 +87,14 @@ export default function TeamSwitcher() {
           </Modal>
         )}
       </TeamList>
+
+      <Logout
+        onClick={() => {
+          dispatch(signOut());
+        }}
+      >
+        SAIR
+      </Logout>
     </Container>
   );
 }
