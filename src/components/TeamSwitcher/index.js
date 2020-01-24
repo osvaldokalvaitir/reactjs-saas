@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Button from '~/styles/components/Button';
@@ -11,11 +11,13 @@ import {
   selectTeam,
   openTeamModal,
   closeTeamModal,
+  createTeamRequest,
 } from '~/store/modules/teams/actions';
 
 export default function TeamSwitcher() {
   const dispatch = useDispatch();
   const teams = useSelector(state => state.teams);
+  const [newTeam, setNewTeam] = useState('');
 
   useEffect(() => {
     async function loadTeams() {
@@ -27,6 +29,12 @@ export default function TeamSwitcher() {
 
   function handleTeamSelect(team) {
     dispatch(selectTeam(team));
+  }
+
+  function handleCreateTeam(e) {
+    e.preventDefault();
+
+    dispatch(createTeamRequest(newTeam));
   }
 
   return (
@@ -53,9 +61,13 @@ export default function TeamSwitcher() {
           <Modal>
             <h1>Criar time</h1>
 
-            <form onSubmit={() => {}}>
+            <form onSubmit={handleCreateTeam}>
               <span>NOME</span>
-              <input name="newTeam" />
+              <input
+                name="newTeam"
+                value={newTeam}
+                onChange={e => setNewTeam(e.target.value)}
+              />
 
               <Button size="big" type="submit">
                 Savar
