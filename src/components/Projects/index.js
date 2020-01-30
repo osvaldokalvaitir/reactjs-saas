@@ -1,12 +1,26 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Button from '~/styles/components/Button';
 
 import { Container, Project } from './styles';
 
+import { getProjectsRequest } from '~/store/modules/projects/actions';
+
 export default function Projects() {
+  const dispatch = useDispatch();
   const activeTeam = useSelector(state => state.teams.active);
+  const projects = useSelector(state => state.projects);
+
+  useEffect(() => {
+    async function loadProjects() {
+      if (activeTeam) {
+        dispatch(getProjectsRequest());
+      }
+    }
+
+    loadProjects();
+  }, [activeTeam, dispatch]);
 
   if (!activeTeam) return null;
 
@@ -20,21 +34,11 @@ export default function Projects() {
         </div>
       </header>
 
-      <Project>
-        <p>Aplicação com React Native</p>
-      </Project>
-
-      <Project>
-        <p>Aplicação com React Native</p>
-      </Project>
-
-      <Project>
-        <p>Aplicação com React Native</p>
-      </Project>
-
-      <Project>
-        <p>Aplicação com React Native</p>
-      </Project>
+      {projects.data.map(project => (
+        <Project key={project.id}>
+          <p>{project.title}</p>
+        </Project>
+      ))}
     </Container>
   );
 }
