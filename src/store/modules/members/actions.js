@@ -1,29 +1,15 @@
-// export function getProjectsRequest() {
-//   return {
-//     type: '@projects/GET_PROJECTS_REQUEST',
-//   };
-// }
+export function getMembersRequest() {
+  return {
+    type: '@members/GET_MEMBERS_REQUEST',
+  };
+}
 
-// export function getProjectsSuccess(data) {
-//   return {
-//     type: '@projects/GET_PROJECTS_SUCCESS',
-//     payload: { data },
-//   };
-// }
-
-// export function createProjectRequest(title) {
-//   return {
-//     type: '@projects/CREATE_PROJECT_REQUEST',
-//     payload: { title },
-//   };
-// }
-
-// export function createProjectSuccess(project) {
-//   return {
-//     type: '@projects/CREATE_PROJECT_SUCCESS',
-//     payload: { project },
-//   };
-// }
+export function getMembersSuccess(data) {
+  return {
+    type: '@members/GET_MEMBERS_SUCCESS',
+    payload: { data },
+  };
+}
 
 export function openMembersModal() {
   return {
