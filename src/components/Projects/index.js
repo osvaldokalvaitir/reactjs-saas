@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Modal from '~/components/Modal';
+import Members from '~/components/Members';
 import Button from '~/styles/components/Button';
 
 import { Container, Project } from './styles';
@@ -12,11 +13,13 @@ import {
   openProjectModal,
   closeProjectModal,
 } from '~/store/modules/projects/actions';
+import { openMembersModal } from '~/store/modules/members/actions';
 
 export default function Projects() {
   const dispatch = useDispatch();
   const activeTeam = useSelector(state => state.teams.active);
   const projects = useSelector(state => state.projects);
+  const members = useSelector(state => state.members);
   const [newProject, setNewProject] = useState('');
 
   useEffect(() => {
@@ -43,7 +46,7 @@ export default function Projects() {
         <h1>{activeTeam.name}</h1>
         <div>
           <Button onClick={() => dispatch(openProjectModal())}>+ Novo</Button>
-          <Button onClick={() => {}}>Membros</Button>
+          <Button onClick={() => dispatch(openMembersModal())}>Membros</Button>
         </div>
       </header>
 
@@ -78,6 +81,8 @@ export default function Projects() {
           </form>
         </Modal>
       )}
+
+      {members.membersModalOpen && <Members />}
     </Container>
   );
 }
