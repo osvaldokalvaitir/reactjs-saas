@@ -22,7 +22,7 @@ export function* createTeam({ payload }) {
       toastrActions.add({
         type: 'error',
         title: 'Erro na operação',
-        message: 'Houve um erro, tente novamente',
+        message: 'Houve um erro, tente novamente!',
       })
     );
   }
