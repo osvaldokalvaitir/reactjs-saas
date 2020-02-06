@@ -11,6 +11,16 @@ export function getMembersSuccess(data) {
   };
 }
 
+export function updateMemberRequest(id, roles) {
+  return {
+    type: '@members/UPDATE_MEMBERS_REQUEST',
+    payload: {
+      id,
+      roles,
+    },
+  };
+}
+
 export function openMembersModal() {
   return {
     type: '@members/OPEN_MEMBERS_MODAL',

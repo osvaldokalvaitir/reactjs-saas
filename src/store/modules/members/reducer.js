@@ -12,6 +12,15 @@ export default function members(state = INITIAL_STATE, action) {
         draft.data = action.payload.data;
         break;
       }
+      case '@members/UPDATE_MEMBERS_REQUEST': {
+        const { id, roles } = action.payload;
+
+        draft.data = draft.data.map(member =>
+          member.id === id ? { ...member, roles } : member
+        );
+
+        break;
+      }
       case '@members/OPEN_MEMBERS_MODAL': {
         draft.membersModalOpen = true;
         break;
