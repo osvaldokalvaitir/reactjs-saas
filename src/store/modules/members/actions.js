@@ -13,10 +13,19 @@ export function getMembersSuccess(data) {
 
 export function updateMemberRequest(id, roles) {
   return {
-    type: '@members/UPDATE_MEMBERS_REQUEST',
+    type: '@members/UPDATE_MEMBER_REQUEST',
     payload: {
       id,
       roles,
+    },
+  };
+}
+
+export function inviteMemberRequest(email) {
+  return {
+    type: '@members/INVITE_MEMBER_REQUEST',
+    payload: {
+      email,
     },
   };
 }

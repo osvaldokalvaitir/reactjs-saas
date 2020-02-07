@@ -12,7 +12,7 @@ export default function members(state = INITIAL_STATE, action) {
         draft.data = action.payload.data;
         break;
       }
-      case '@members/UPDATE_MEMBERS_REQUEST': {
+      case '@members/UPDATE_MEMBER_REQUEST': {
         const { id, roles } = action.payload;
 
         draft.data = draft.data.map(member =>
