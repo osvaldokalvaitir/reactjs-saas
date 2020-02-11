@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+import Can from '~/components/Can';
 import Modal from '~/components/Modal';
 import Members from '~/components/Members';
 import Button from '~/styles/components/Button';
@@ -45,7 +46,9 @@ export default function Projects() {
       <header>
         <h1>{activeTeam.name}</h1>
         <div>
-          <Button onClick={() => dispatch(openProjectModal())}>+ Novo</Button>
+          <Can checkPermission="projects_create">
+            <Button onClick={() => dispatch(openProjectModal())}>+ Novo</Button>
+          </Can>
           <Button onClick={() => dispatch(openMembersModal())}>Membros</Button>
         </div>
       </header>

@@ -3,6 +3,8 @@ import produce from 'immer';
 const INITIAL_STATE = {
   signedIn: !!localStorage.getItem('@Omni:token'),
   token: localStorage.getItem('@Omni:token') || null,
+  roles: [],
+  permissions: [],
 };
 
 export default function auth(state = INITIAL_STATE, action) {
@@ -16,6 +18,11 @@ export default function auth(state = INITIAL_STATE, action) {
       case '@auth/SIGN_OUT': {
         draft.token = null;
         draft.signedIn = false;
+        break;
+      }
+      case '@auth/GET_PERMISSIONS_SUCESS': {
+        draft.roles = action.payload.roles;
+        draft.permissions = action.payload.permissions;
         break;
       }
       default:

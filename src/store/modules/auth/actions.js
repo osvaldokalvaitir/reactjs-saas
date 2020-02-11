@@ -24,3 +24,10 @@ export function signUpRequest(name, email, password) {
     payload: { name, email, password },
   };
 }
+
+export function getPermissionsSuccess(roles, permissions) {
+  return {
+    type: '@auth/GET_PERMISSIONS_SUCESS',
+    payload: { roles, permissions },
+  };
+}

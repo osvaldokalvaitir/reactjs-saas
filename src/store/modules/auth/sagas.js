@@ -1,9 +1,9 @@
-import { takeLatest, all, call, put } from 'redux-saga/effects';
+import { takeLatest, all, call, put, select } from 'redux-saga/effects';
 import { push } from 'connected-react-router';
 import { actions as toastrActions } from 'react-redux-toastr';
 import api from '~/services/api';
 
-import { signInSuccess } from './actions';
+import { signInSuccess, getPermissionsSuccess } from './actions';
 
 export function* signIn({ payload }) {
   try {
@@ -52,6 +52,21 @@ export function* signUp({ payload }) {
       })
     );
   }
+}
+
+export function* getPermissions() {
+  const team = yield select(state => state.teams.active);
+  const signedIn = yield select(state => state.auth.signedIn);
+
+  if (!signedIn || !team) {
+    return;
+  }
+
+  const response = yield call(api.get, 'permissions');
+
+  const { roles, permissions } = response.data;
+
+  yield put(getPermissionsSuccess(roles, permissions));
 }
 
 export default all([

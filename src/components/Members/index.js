@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Select from 'react-select';
 import api from '~/services/api';
 
+import Can from '~/components/Can';
 import Modal from '~/components/Modal';
 import Button from '~/styles/components/Button';
 import { MembersList, Invite } from './styles';
@@ -48,29 +49,36 @@ export default function Members() {
     <Modal size="big">
       <h1>Membros</h1>
 
-      <Invite onSubmit={handleInvite}>
-        <input
-          name="invite"
-          placeholder="Convidar para o time"
-          value={invite}
-          onChange={e => setInvite(e.target.value)}
-        />
-        <Button type="submit">Enviar</Button>
-      </Invite>
+      <Can checkPermission="invites_create">
+        <Invite onSubmit={handleInvite}>
+          <input
+            name="invite"
+            placeholder="Convidar para o time"
+            value={invite}
+            onChange={e => setInvite(e.target.value)}
+          />
+          <Button type="submit">Enviar</Button>
+        </Invite>
+      </Can>
 
       <form>
         <MembersList>
           {members.data.map(member => (
             <li key={member.id}>
               <strong>{member.user.name}</strong>
-              <Select
-                isMulti
-                options={allRoles}
-                value={member.roles}
-                getOptionLabel={role => role.name}
-                getOptionValue={role => role.id}
-                onChange={value => handleRolesChange(member.id, value)}
-              />
+              <Can checkRole="administrator">
+                {can => (
+                  <Select
+                    isMulti
+                    isDisabled={!can}
+                    options={allRoles}
+                    value={member.roles}
+                    getOptionLabel={role => role.name}
+                    getOptionValue={role => role.id}
+                    onChange={value => handleRolesChange(member.id, value)}
+                  />
+                )}
+              </Can>
             </li>
           ))}
         </MembersList>
