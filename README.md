@@ -16,6 +16,18 @@ Aplicação consumindo os recursos da API do [Node - SaaS](https://github.com/os
 
 - [Capturas de Tela](#capturas-de-tela)
 
+  - [Login](#login)
+
+  - [Cadastro](#cadastro)
+
+  - [Dashboard](#dashboard)
+
+  - [Time](#time)
+
+  - [Projeto](#projeto)
+
+  - [Membros](#membros)
+
 - [Desenvolvimento](#desenvolvimento)
 
   - [Configuração do Ambiente](#configuração-do-ambiente)
@@ -30,9 +42,37 @@ Aplicação consumindo os recursos da API do [Node - SaaS](https://github.com/os
 
   - [APIs](#apis)
 
-  - [Ferramentas](#ferramentas)
-
 ## Capturas de Tela
+
+### Login
+
+![SignIn](/.github/assets/signin.png)
+Esta é a primeira tela, onde o usuário precisa realizar o login para entrar no sistema.
+
+### Cadastro
+
+![SignUp](/.github/assets/signup.png)
+Nesta tela, é necessário o usuário preencher os campos para criar uma conta no sistema.
+
+### Dashboard
+
+![Dashboard](/.github/assets/dashboard.png)
+No dashboard, encontram-se todos as empresas vindas da API e todos os projetos da empresa selecionada.
+
+### Time
+
+![Team](/.github/assets/team.png)
+Neste janela, é possível criar um time.
+
+### Projeto
+
+![Project](/.github/assets/project.png)
+Neste janela, é possível criar um projeto para um time.
+
+### Membros
+
+![Members](/.github/assets/members.png)
+Neste janela, é possível convidar membros e alterar as permissões dos membros existentes.
 
 ## Desenvolvimento
 
@@ -58,6 +98,8 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 - [babel-eslint](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/babel-eslint.md)
 
+- [Connected React Router](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/connected-react-router.md)
+
 - [Create React App](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/create-react-app.md)
 
 - [customize-cra](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/customize-cra.md)
@@ -70,15 +112,23 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 - [eslint-plugin-prettier](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-plugin-prettier.md)
 
+- [history](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/history.md)
+
 - [Immer](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/immer.md)
 
 - [Prettier](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/prettier.md)
+
+- [prop-types](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/prop-types.md)
 
 - [React Redux](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-redux.md)
 
 - [react-app-rewired](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-app-rewired.md)
 
+- [react-redux-toastr](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-redux-toastr.md)
+
 - [react-router-dom](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-app-rewired.md)
+
+- [React-Select](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-select.md)
 
 - [Redux](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/redux.md)
 
@@ -92,4 +142,46 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
   - **Rotas**
 
-### Ferramentas
+### APIs
+
+- **Interna**
+
+  - **Rotas**
+
+    - Sessões
+
+      - Adiciona novas sessões
+
+    - Usuários
+
+      - Adiciona novos usuários
+
+    - Times
+
+      - Lista todos os times
+
+      - Adiciona novos times
+
+    - Convites
+
+      - Adiciona novos convites para um time
+
+    - Projetos
+
+      - Lista todos os projetos de um time
+
+      - Adiciona novos projetos para um time
+
+    - Função
+
+      - Lista todas as funções
+
+    - Membros
+
+      - Lista todos os membros de um time
+
+      - Edita dados de um mebro de um time
+
+    - Permissões
+
+      - Lista todas as funções e as permissões do membro de um time
