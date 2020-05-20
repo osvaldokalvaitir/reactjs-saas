@@ -142,12 +142,6 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
   - **Rotas**
 
-### APIs
-
-- **Interna**
-
-  - **Rotas**
-
     - Sessões
 
       - Adiciona novas sessões
