@@ -57,7 +57,7 @@ Nesta tela, é necessário o usuário preencher os campos para criar uma conta n
 ### Dashboard
 
 ![Dashboard](/.github/assets/dashboard.png)
-No dashboard, encontram-se todos as empresas vindas da API e todos os projetos da empresa selecionada.
+No dashboard, encontram-se todos os os times vindos da API e todos os projetos do time selecionado.
 
 ### Time
 
