@@ -10,7 +10,7 @@
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 ![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 
-Aplicação usando Redux, Redux-Saga, react-redux-toastr, React-Select, Immer, styled-components, customize-cra e react-app-rewired consumindo os recursos da API do [Node - SaaS](https://github.com/osvaldokalvaitir/node-saas).
+Aplicação usando Redux, Redux-Saga, react-redux-toastr, React-Select, Immer, styled-components, customize-cra e react-app-rewired consumindo os recursos da API do [Node.js - SaaS](https://github.com/osvaldokalvaitir/nodejs-saas).
 
 ## Índice
 
@@ -138,7 +138,7 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 ### APIs
 
-- **[Node - SaaS](https://github.com/osvaldokalvaitir/node-saas)**
+- **[Node.js - SaaS](https://github.com/osvaldokalvaitir/nodejs-saas)**
 
   - **Rotas**
 
