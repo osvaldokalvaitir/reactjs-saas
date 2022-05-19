@@ -1,181 +1,63 @@
-# ReactJS - SaaS
+<h1 align="center">
+    <img src="/.github/assets/logo.png"
+    width="200px"
+    alt="Logo" />
+</h1>
 
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/osvaldokalvaitir/reactjs-saas/blob/master/LICENSE)
-![](https://img.shields.io/github/package-json/v/osvaldokalvaitir/reactjs-saas.svg)
-![](https://img.shields.io/github/last-commit/osvaldokalvaitir/reactjs-saas.svg?color=red)
-![](https://img.shields.io/github/languages/top/osvaldokalvaitir/reactjs-saas.svg?color=yellow)
-![](https://img.shields.io/github/languages/count/osvaldokalvaitir/reactjs-saas.svg?color=lightgrey)
-![](https://img.shields.io/github/languages/code-size/osvaldokalvaitir/reactjs-saas.svg)
-![](https://img.shields.io/github/repo-size/osvaldokalvaitir/reactjs-saas.svg?color=blueviolet)
-[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
-![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+<h3 align="center">
+  ReactJS - SaaS
+</h3>
 
-Aplicação usando Redux, Redux-Saga, react-redux-toastr, React-Select, Immer, styled-components, customize-cra e react-app-rewired consumindo os recursos da API do [Node.js - SaaS](https://github.com/osvaldokalvaitir/nodejs-saas).
+<p align="center">
+  :cloud: Application using Redux, Redux-Saga, react-redux-toastr, React-Select, Immer, styled-components, customize-cra, react-app-rewired and consuming the features of the Node.js - SaaS API
+</p>
 
-## Índice
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osvaldokalvaitir/reactjs-saas.svg?color=00A83A">
 
-- [Capturas de Tela](#capturas-de-tela)
+  <img alt="GitHub language top" src="https://img.shields.io/github/languages/top/osvaldokalvaitir/reactjs-saas.svg?color=00A83A">
 
-  - [Login](#login)
+  <a href="https://kalvaitir.com/">
+    <img alt="Made by Kalvaitir" src="https://img.shields.io/badge/made%20by-Kalvaitir-00A83A">
+  </a>
 
-  - [Cadastro](#cadastro)
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-00A83A">
+</p>
 
-  - [Dashboard](#dashboard)
+<p align="center">
+  <a href="#computer-demo">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#wrench-install-and-run">Install and run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#memo-license">License</a>
+</p>
 
-  - [Time](#time)
+## :computer: Demo
 
-  - [Projeto](#projeto)
+![Demo](/.github/assets/demo.gif)
 
-  - [Membros](#membros)
+## :wrench: Install and run
 
-- [Desenvolvimento](#desenvolvimento)
+_ps: Before running the app, start the [Node.js - SaaS](https://github.com/osvaldokalvaitir/nodejs-saas) backend._
 
-  - [Configuração do Ambiente](#configuração-do-ambiente)
+Open terminal:
 
-  - [Instalação do Projeto](#instalação-do-projeto)
+```sh
+# Clone this repo
+git clone https://github.com/osvaldokalvaitir/reactjs-saas
 
-  - [Execução do Projeto](#execução-do-projeto)
+# Entry in folder
+cd reactjs-saas
 
-- [Utilizados no Projeto](#utilizados-no-projeto)
+# Install deps with npm or yarn
+npm install | yarn
 
-  - [Bibliotecas](#bibliotecas)
+# Launch the app with npm or yarn
+npm start | yarn start
+```
 
-  - [APIs](#apis)
+## :memo: License
 
-## Capturas de Tela
+This project is under the MIT license. See [LICENSE](/LICENSE) for more information.
 
-### Login
+---
 
-![SignIn](/.github/assets/signin.png)
-Esta é a primeira tela, onde o usuário precisa realizar o login para entrar no sistema.
-
-### Cadastro
-
-![SignUp](/.github/assets/signup.png)
-Nesta tela, é necessário o usuário preencher os campos para criar uma conta no sistema.
-
-### Dashboard
-
-![Dashboard](/.github/assets/dashboard.png)
-No dashboard, encontram-se todos os os times vindos da API e todos os projetos do time selecionado.
-
-### Time
-
-![Team](/.github/assets/team.png)
-Neste janela, é possível criar um time.
-
-### Projeto
-
-![Project](/.github/assets/project.png)
-Neste janela, é possível criar um projeto para um time.
-
-### Membros
-
-![Members](/.github/assets/members.png)
-Neste janela, é possível convidar membros e alterar as permissões dos membros existentes.
-
-## Desenvolvimento
-
-### Configuração do Ambiente
-
-Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/README.md) e siga `Configuração de Ambiente`.
-
-### Instalação do Projeto
-
-Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/nodejs.md) e siga `Instalação de Projeto`.
-
-### Execução do Projeto
-
-Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/create-react-app.md) e siga `Execução de Projeto para Desenvolvimento` ou `Construção e Execução de Projeto para Produção`.
-
-## Utilizados no Projeto
-
-### Bibliotecas
-
-- [Axios](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/axios.md)
-
-- [Babel Root Import](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/babel-plugin-root-import.md)
-
-- [babel-eslint](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/babel-eslint.md)
-
-- [Connected React Router](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/connected-react-router.md)
-
-- [Create React App](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/create-react-app.md)
-
-- [customize-cra](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/customize-cra.md)
-
-- [ESLint](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint.md)
-
-- [eslint-config-prettier](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-config-prettier.md)
-
-- [eslint-import-resolver-babel-plugin-root-import](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-import-resolver-babel-plugin-root-import.md)
-
-- [eslint-plugin-prettier](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-plugin-prettier.md)
-
-- [history](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/history.md)
-
-- [Immer](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/immer.md)
-
-- [Prettier](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/prettier.md)
-
-- [prop-types](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/prop-types.md)
-
-- [React Redux](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-redux.md)
-
-- [react-app-rewired](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-app-rewired.md)
-
-- [react-redux-toastr](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-redux-toastr.md)
-
-- [react-router-dom](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-app-rewired.md)
-
-- [React-Select](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-select.md)
-
-- [Redux](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/redux.md)
-
-- [Redux-Saga](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/redux-saga.md)
-
-- [styled-components](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/styled-components.md)
-
-### APIs
-
-- **[Node.js - SaaS](https://github.com/osvaldokalvaitir/nodejs-saas)**
-
-  - **Rotas**
-
-    - Sessões
-
-      - Adiciona novas sessões
-
-    - Usuários
-
-      - Adiciona novos usuários
-
-    - Times
-
-      - Lista todos os times
-
-      - Adiciona novos times
-
-    - Convites
-
-      - Adiciona novos convites para um time
-
-    - Projetos
-
-      - Lista todos os projetos de um time
-
-      - Adiciona novos projetos para um time
-
-    - Função
-
-      - Lista todas as funções
-
-    - Membros
-
-      - Lista todos os membros de um time
-
-      - Edita dados de um mebro de um time
-
-    - Permissões
-
-      - Lista todas as funções e as permissões do membro de um time
+<p align="center">
+Developed with 💚 by <a href="https://www.linkedin.com/in/osvaldokalvaitir">Osvaldo Kalvaitir Filho</a>
+</p>
